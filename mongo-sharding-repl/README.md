@@ -2,10 +2,34 @@
 
 ## Как запустить
 
-Запускаем mongodb и приложение
+Запускаем минимальную тестовую комбинацию Mongo сервера с шардингом и приложение на python
 
 ```shell
 docker compose up -d
+```
+
+Инициализируем конфигурационный сервер
+
+```shell
+./scripts/step_1_config_server_init.sh
+```
+
+Инициализируем шард 1
+
+```shell
+./scripts/step_2_shard_1_init.sh
+```
+
+Инициализируем шард 2
+
+```shell
+./scripts/step_3_shard_2_init.sh
+```
+
+Инициализируем роутер
+
+```shell
+./scripts/step_4_router_init.sh
 ```
 
 Заполняем mongodb данными
@@ -15,6 +39,13 @@ docker compose up -d
 ```
 
 ## Как проверить
+
+### Проверка с помощью скрипта 
+
+```shell
+./scripts/step_6_validation.sh
+```
+
 
 ### Если вы запускаете проект на локальной машине
 
