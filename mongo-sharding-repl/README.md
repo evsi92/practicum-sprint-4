@@ -2,9 +2,8 @@
 
 ## Как запустить
 
-Переходим в папку sharding-repl-cache. Для удобста можно использовать README внутри нее.
+Запускаем минимальную тестовую комбинацию Mongo сервера с шардингом и приложение на python
 
-Запускаем минимальную тестовую комбинацию Mongo сервера с шардированием, репликацией, кешированием и приложение на python
 ```shell
 docker compose up -d
 ```
@@ -33,22 +32,16 @@ docker compose up -d
 ./scripts/step_4_router_init.sh
 ```
 
-Настраиваем кеш
-
-```shell
-./scripts/step_5_redis_init.sh
-```
-
 Заполняем mongodb данными
 
 ```shell
-./scripts/step_6_add_data.sh
+./scripts/step_5_add_data.sh
 ```
 
 ## Как проверить
 
-### Проверка с помощью скрипта
+### Проверка с помощью скрипта 
 
 ```shell
-./scripts/step_7_validation.sh
+./scripts/step_6_validation.sh
 ```
